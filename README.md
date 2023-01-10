@@ -1,5 +1,5 @@
 # TextAdventure
-AP CS A Project 
+AP CS A Project version 1.0
 
 # Rubric
 Modify an existing class (new methods and attributes)	10pts
