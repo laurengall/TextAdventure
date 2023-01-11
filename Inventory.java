@@ -4,11 +4,13 @@ class Inventory {
 
     public static int checkItem(int row, int col, String item,
             ArrayList<String> inventory, Room[][] room, int score) {
-
-      boolean isFull = false; 
+NPC npc = new NPC("Todd", false); 
+       
       if (inventory.size() == 24){
-        System.out.println("You have all of the evidence you need! But, alas, the suspect has discovered you are in the house! Get back to the Entry Way in less that 20 moves."); 
+
+        npc.chase(); 
       }
+
 
         // Check if item is a valid room item
         boolean validRoomItem = false;
@@ -73,3 +75,4 @@ class Inventory {
     } return "There are " + invCount + " items in your inventory"; 
   }
 }
+

@@ -88,7 +88,7 @@ room[3][1].setExits(exits);
         room[3][2].setNumber(8);
         room[3][2].setName("Guest Bathroom");
         room[3][2].setDescription("You are in the guest bathroom. You hear a scream from the basement.");
-      room[3][2].setItems("empty prescription bottle");
+      room[3][2].setItems("empty presription bottle");
         room[3][2].setItems("blood stained towel");
 room[3][2].setExits(exits);
       // Office row 3 col 3
@@ -150,7 +150,7 @@ room[4][4].setExits(exits);
         room[3][6].setNumber(15);
         room[3][6].setName("Dining Room");
         room[3][6].setDescription("You are in the dining room.");
-      room[3][6].setItems("steak knife");
+      room[3][6].setItems("fork");
       room[3][6].setItems("shattered plate");
       room[3][6].setExits(exits);
         
@@ -160,14 +160,44 @@ room[4][4].setExits(exits);
 
     	System.out.println();
         
-        if (!room[x][y].getItems().isEmpty()){
+        if (!room[x][y].getItems().isEmpty()) {
             System.out.println(room[x][y].getDescription() + " - at Position: " + x + "," + y);
             System.out.println("You see: " + room[x][y].getItems()) ;      
         }
+          /* System.out.println("You are trapped and will never be seen again. Type 'restart' to try again, or 'quit' to end the game.");
+*/
          else {
             System.out.println("You see nothingness: " + " - in Position: " + x + "," + y);
-      System.out.println("You are trapped and will never be seen again. Type 'restart' to try again, or 'quit' to end the game.");}
+      
+         }
     }
+  
+  public static void countdown(Room[][] room, int x, int y){
+      
+  int count = 20; 
+ 
+    while (count > 0){
+
+    if (x != 0 && y != 7 ) {
+      count--; 
+    } 
+    else if (x == 0 && y == 7){
+      
+      System.out.println("You escaped the suspect's house with enough evidence to make an arrest! YOU WIN."); 
+    
+    }
+     
+ }
+
+    if (count == 0 && x != 0 && y != 7){
+      System.out.println("You were taken hostage by the suspect, never to be seen again."); 
+    }
+
+    
+  
+    
+  } 
+   
 
     // Remove item from room when added to inventory
     public static void removeItem(Room[][] room, int x, int y, String item) {

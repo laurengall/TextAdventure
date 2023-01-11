@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+
+public class Main  {
 
 	
     public static void main(String args[]) {
@@ -21,7 +22,7 @@ public class Main {
         
         // Title Screen
     	System.out.println("+-------------------------------+");
-    	System.out.println("| Text Adventure: Detective Work |");
+    	System.out.println("| Text Adventure: Detective Dan |");
     	System.out.println("+-------------------------------+");
     	
     	// Sounds.playTitleMusic(1);
@@ -129,27 +130,7 @@ public class Main {
         }
         System.exit(0);
     }
-/*
-  public static void countdown(){
-  String input = Input.getInput();
-  int count = 20; 
-  String roomName = Rooms.getName(); 
-    while (roomName != "Entry Way" && count > 0){
-    if (input.equals("n") || input.equals("s") ||input.equals("e") ||input.equals("w")) {
-      count--; 
-    }
-    }
 
-    if (count == 0 && roomName != "Entry Way"){
-      System.out.println("You were taken hostage by the suspect, never to be seen again."); 
-    }
 
-    if (count > 0 && roomName == "Entry Way"){
-      System.out.println("You escaped the suspect's house with enough evidence to make an arrest! YOU WIN."); 
-    }
-    
-    
-  } 
-*/
 }
 
