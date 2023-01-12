@@ -2,14 +2,16 @@ import java.util.ArrayList;
 
 class Inventory {
 
-    public static int checkItem(int row, int col, String item,
-            ArrayList<String> inventory, Room[][] room, int score) {
+    public static int checkItem(int row, int col, String item,  ArrayList<String> inventory, Room[][] room, int score) {
+      
 NPC npc = new NPC("Todd", false); 
        
       if (inventory.size() == 24){
-
-        npc.chase(); 
+        npc.chase(score); 
+        
+        
       }
+      
 
 
         // Check if item is a valid room item
@@ -35,7 +37,7 @@ NPC npc = new NPC("Todd", false);
             //Sounds.playItemPickup();
             System.out.println("You pick up the " + item + ".");
             inventory.add(item);
-            score += 5;
+            score += 10;
             Rooms.removeItem(room, row, col, item);
         } else if (inInventory) {
             System.out.println("You already have the " + item + ".");
@@ -47,6 +49,8 @@ NPC npc = new NPC("Todd", false);
 
         return score;
     }
+
+  
 
     public static void print(ArrayList<String> inventory) {
 
@@ -74,5 +78,14 @@ NPC npc = new NPC("Todd", false);
       invCount++;
     } return "There are " + invCount + " items in your inventory"; 
   }
-}
 
+  public static int getInventorySize2(ArrayList<String> inventory){
+    int invCount2 = 0;
+    for(String i: inventory){
+      invCount2++;
+    } return invCount2; 
+  }
+  
+  
+        
+} 
