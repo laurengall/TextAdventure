@@ -24,7 +24,7 @@ public class Main  {
     	System.out.println("+-------------------------------+");
     	System.out.println("| Text Adventure: Detective Dan |");
     	System.out.println("+-------------------------------+");
-    	
+    	System.out.println("Disclaimer: \nThe maker of this game is lacking in fine arts and poetry skills. \nRiddles were generated with ChatGPT. \nCopyright OpenAI 2023."); 
     	// Sounds.playTitleMusic(1);
     	
     	// Print starting room description
@@ -119,6 +119,10 @@ public class Main  {
             }
             
             // Quit commands
+              else if (input.equals("quit") && Inventory.getInventorySize2(inventory) >= 24){
+                System.out.println("YOU WIN. Your toal score was: "+ score + "/330. Goodbye!");
+                playing = false;
+              }
             else if (input.equals("quit")) {
                 System.out.println("Goodbye!");
                 playing = false;
@@ -133,4 +137,5 @@ public class Main  {
 
 
 }
+
 
