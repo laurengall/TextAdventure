@@ -17,7 +17,7 @@ class Rooms {
         exits[0] = ""; exits[1] = "s"; exits[2] = ""; exits[3] = "";
         room[0][7].setNumber(0);
         room[0][7].setName("Entry Way");
-        room[0][7].setDescription("You are in the entryway to the suspect's house. Gather as much evidence as possible and get out ASAP.");
+        room[0][7].setDescription("You are in the entryway to the suspect's house. You must get at least 25 items to win. Gather all 33 items to get a perfect score.");
         room[0][7].setItems("newspaper");
         room[0][7].setItems("small box");
         room[0][7].setExits(exits);
@@ -55,23 +55,25 @@ class Rooms {
         room[1][1].setName("Private Bathroom");
         room[1][1].setDescription("You are in the private bathroom.");
         room[1][1].setItems("hair dye");
+      room[1][1].setItems("comb");
         room[1][1].setItems("colored contacts");
       room[1][1].setExits(exits);
 
       // Master Bedroom row 2 col 1
-      exits[0] = "n"; exits[1] = ""; exits[2] = "e"; exits[3] = "";
+      exits[0] = "n"; exits[1] = ""; exits[2] = "e"; exits[3] = "w";
         room[2][1].setNumber(5);
         room[2][1].setName("Master Bedroom");
         room[2][1].setDescription("You are in the master bedroom. You hear shuffling downstairs.");
       room[2][1].setItems("murder mystery novel");
-        room[2][1].setItems("TV remote");
+        room[2][1].setItems("remote");
+      room[2][1].setItems("blanket");
       room[2][1].setExits(exits);
 
       // Closet row 2 col 0
       exits[0] = ""; exits[1] = "s"; exits[2] = "e"; exits[3] = "";
         room[2][0].setNumber(6);
         room[2][0].setName("Closet");
-        room[2][0].setDescription("You are in the closet.");
+        room[2][0].setDescription("You are in the closet. David F. says: \n If south brings you warmth and west brings you sea, \n But your destination is where you'll be free. \n Go back east, and on the right path you'll stay,\n Turn south and you'll wander astray.");
       room[2][0].setItems("wig");
         room[2][0].setItems("ripped t-shirt");
       room[2][0].setExits(exits);
@@ -88,11 +90,12 @@ room[3][1].setExits(exits);
         room[3][2].setNumber(8);
         room[3][2].setName("Guest Bathroom");
         room[3][2].setDescription("You are in the guest bathroom. You hear a scream from the basement.");
-      room[3][2].setItems("empty presription bottle");
+      room[3][2].setItems("empty prescription bottle");
         room[3][2].setItems("blood stained towel");
+      room[3][2].setItems("hair brush");
 room[3][2].setExits(exits);
       // Office row 3 col 3
-      exits[0] = ""; exits[1] = "s"; exits[2] = "e"; exits[3] = "w";
+      exits[0] = "n"; exits[1] = ""; exits[2] = "e"; exits[3] = "w";
         room[3][3].setNumber(9);
         room[3][3].setName("Office");
         room[3][3].setDescription("You are in the office.");
@@ -118,8 +121,8 @@ room[2][3].setExits(exits);
       exits[0] = "n"; exits[1] = "s"; exits[2] = ""; exits[3] = "";
         room[2][4].setNumber(12);
         room[2][4].setName("Gym");
-        room[2][4].setDescription("You are in the gym.");
-      room[2][4].setItems("2.5 lb dumbbell");
+        room[2][4].setDescription("You are in the gym. Mathias M. says: \n Where sweat is shed and muscles are made,\n From there a new direction to take.\n Go south, young, one, and success you'll find, \n Your goal is waiting, just one step behind.");
+      room[2][4].setItems("dumbbell");
       room[2][4].setItems("resistance band");
 room[2][4].setExits(exits);
       // Garage row 4 col 4
@@ -150,7 +153,7 @@ room[4][4].setExits(exits);
         room[3][6].setNumber(15);
         room[3][6].setName("Dining Room");
         room[3][6].setDescription("You are in the dining room.");
-      room[3][6].setItems("fork");
+      room[3][6].setItems("chair leg");
       room[3][6].setItems("shattered plate");
       room[3][6].setExits(exits);
         
@@ -164,8 +167,7 @@ room[4][4].setExits(exits);
             System.out.println(room[x][y].getDescription() + " - at Position: " + x + "," + y);
             System.out.println("You see: " + room[x][y].getItems()) ;      
         }
-          /* System.out.println("You are trapped and will never be seen again. Type 'restart' to try again, or 'quit' to end the game.");
-*/
+         
          else {
             System.out.println("You see nothingness: " + " - in Position: " + x + "," + y);
       
@@ -267,6 +269,8 @@ class Room {
     public ArrayList<String> getItems() {
         return this.items;
     }
+  
+  
 }
 
 class item {
@@ -296,4 +300,3 @@ class item {
     }
     
 }
-
