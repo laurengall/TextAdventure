@@ -2,17 +2,31 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /* 
-Task 1: Inventory.java -> class Inventory -> public static String getInventorySize(). Takes in the ArrayList of inventory and uses an enhanced for loop to iterate through the inventory, incrementing an int variable for each iteration. Returns a String that uses concatenation to show the user how many items are in their inventory in numerical form. This method is called when the user types in ‘i count’. 
+Task 1: Modify an existing class (new methods and attributes.
+Inventory.java -> class Inventory -> public static String getInventorySize(). Takes in the ArrayList of inventory and uses an enhanced for loop to iterate through the inventory, incrementing an int variable for each iteration. Returns a String that uses concatenation to show the user how many items are in their inventory in numerical form. This method is called when the user types in ‘i count’. 
 
-Task 2 and Optional Task 2: NPC.java -> class NPC -> public void chase() was the original plan for integrating an NPC into the game, but now it is just misleading ☹ . Now, classmates appear in the descriptions of rooms with a trap connected, and give Detective Dan a “riddle” that points him away from a trap. 
+Task 2: Add a new class (that actually enhances the game).
+Endgame.java -> class Endgame -> public void done() gives the user their score after their inventory is at the minimum score, tells them how may items they need, and allows them to decide whether to continue or not. 
 
-Task 3: Rooms.java -> class Rooms ->17 rooms are implemented. 
-Task 4: Main.java -> class Main -> public static void noExit(). This method is called when there is no exit for the direction the user typed in. Instead of having “You can’t go that way” typed out four different times, the method noExit() is called in four places instead. 
-Task 5: When the player’s score reaches 250/330 (25/33 items collected), they have the option to “win” right away and finish with the minimum score, or they can continue playing and try to get more points. 
-Task 6: NPCs appear at “turning points” (places where one ends up trapped in a room or continues through the map). They give riddles/poems to the player, hinting at the right direction to go. I used ChatGPT to generate the poems. 
+Task 3: Create at least 15 rooms with items.
+Rooms.java -> class Rooms -> 17 rooms are implemented. 
 
-Optional Task 1: Theme is mystery, where the user is a detective searching for enough evidence in the suspect’s house to convict. 
-Optional Task 3
+Task 4: Make the code more efficient or streamlined.
+Main.java -> class Main -> public static void noExit(). This method is called when there is no exit for the direction the user typed in. Instead of having “You can’t go that way” typed out four different times, the method noExit() is called in four places instead. 
+
+Task 5: Create a way to “win” the game.
+When the player’s score reaches 250/330 (25/33 items collected), they have the option to “win” right away and finish with the minimum score, or they can continue playing and try to get more points. 
+
+Task 6: Make the game more interactive better feedback, sounds, etc.
+In addition to the riddles that the NPCs say, I added info to the room descriptions that add to the storyline. 
+
+Optional Task 1: Add a theme - (horror – historic – puzzle -- adventure).
+Theme is mystery, where the user is a detective searching for enough evidence in the suspect’s house to convict. 
+
+Optional Task 2: Add a NPC (non-player character).
+Classmates appear in the descriptions of rooms with a trap connected, and give Detective Dan a “riddle” that points him away from a trap.I used ChatGPT to generate the poems. 
+
+Optional Task 3:
 */
 public class Main  {
     public static void main(String args[]) {
@@ -34,7 +48,7 @@ public class Main  {
     	System.out.println("+-------------------------------+");
     	System.out.println("| Text Adventure: Detective Dan |");
     	System.out.println("+-------------------------------+");
-    	System.out.println("Disclaimer: \nThe maker of this game is lacking in poetry skills. \nRiddles were generated with ChatGPT. \nCopyright OpenAI 2023."); 
+    	
     	// Sounds.playTitleMusic(1);
     	
     	// Print starting room description
@@ -130,11 +144,11 @@ public class Main  {
             
             // Quit commands
               else if (input.equals("quit") && Inventory.getInventorySize2(inventory) >= 24){
-                System.out.println("YOU WIN. Your toal score was: "+ score + "/330. Goodbye!");
+                System.out.println("YOU WIN. Your toal score was: "+ score + "/330. Goodbye!\nNote: All riddles were generated with ChatGPT due to the lack of poetry skills possessed by the maker of this game.");
                 playing = false;
               }
             else if (input.equals("quit")) {
-                System.out.println("Goodbye!");
+                System.out.println("Goodbye!\nNote: All riddles were generated with ChatGPT due to the lack of poetry skills possessed by the maker of this game.");
                 playing = false;
 
             // Catch-all for invalid input

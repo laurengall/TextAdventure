@@ -4,16 +4,13 @@ class Inventory {
 
     public static int checkItem(int row, int col, String item,  ArrayList<String> inventory, Room[][] room, int score) {
       
-NPC npc = new NPC("Todd", false); 
+Endgame endgame = new Endgame(); 
        
       if (inventory.size() == 24){
-        npc.chase(score); 
-        
+        endgame.done(score);        
         
       }
       
-
-
         // Check if item is a valid room item
         boolean validRoomItem = false;
         for (String roomItems : room[row][col].items) {
@@ -50,8 +47,6 @@ NPC npc = new NPC("Todd", false);
         return score;
     }
 
-  
-
     public static void print(ArrayList<String> inventory) {
 
         System.out.println("Inventory:");
@@ -76,7 +71,7 @@ NPC npc = new NPC("Todd", false);
     int invCount = 0;
     for(String i: inventory){
       invCount++;
-    } return "There are " + invCount + " items in your inventory"; 
+    } return "There are " + invCount + " items in your inventory."; 
   }
 
   public static int getInventorySize2(ArrayList<String> inventory){
@@ -85,7 +80,5 @@ NPC npc = new NPC("Todd", false);
       invCount2++;
     } return invCount2; 
   }
-  
-  
-        
+          
 } 
