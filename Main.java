@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 /* 
 Task 1: Modify an existing class (new methods and attributes.
-Inventory.java -> class Inventory -> public static String getInventorySize(). Takes in the ArrayList of inventory and uses an enhanced for loop to iterate through the inventory, incrementing an int variable for each iteration. Returns a String that uses concatenation to show the user how many items are in their inventory in numerical form. This method is called when the user types in ‘i count’. 
+Inventory.java -> class Inventory -> public static String getInventorySize() and public static int getInventorySize2(). Takes in the ArrayList of inventory and uses an enhanced for loop to iterate through the inventory, incrementing an int variable for each iteration. Returns a String that uses concatenation to show the user how many items are in their inventory in numerical form. This method is called when the user types in ‘i count’. InventorySize2() essentially does same thing but returns an int. 
 
 Task 2: Add a new class (that actually enhances the game).
 Endgame.java -> class Endgame -> public void done() gives the user their score after their inventory is at the minimum score, tells them how may items they need, and allows them to decide whether to continue or not. 
+NPC.java -> class NPC -> creates NPC objects that help Detective Dan stay away from traps with riddles. 
 
 Task 3: Create at least 15 rooms with items.
 Rooms.java -> class Rooms -> 17 rooms are implemented. 
@@ -18,13 +19,13 @@ Task 5: Create a way to “win” the game.
 When the player’s score reaches 250/330 (25/33 items collected), they have the option to “win” right away and finish with the minimum score, or they can continue playing and try to get more points. 
 
 Task 6: Make the game more interactive better feedback, sounds, etc.
-In addition to the riddles that the NPCs say, I added info to the room descriptions that add to the storyline. 
+In addition to the riddles that the NPCs say, I put info to the room descriptions that add to the storyline. 
 
 Optional Task 1: Add a theme - (horror – historic – puzzle -- adventure).
 Theme is mystery, where the user is a detective searching for enough evidence in the suspect’s house to convict. 
 
 Optional Task 2: Add a NPC (non-player character).
-Classmates appear in the descriptions of rooms with a trap connected, and give Detective Dan a “riddle” that points him away from a trap.I used ChatGPT to generate the poems. 
+Classmates appear in the descriptions of rooms with a trap connected, and give Detective Dan a “riddle” that points him away from a trap. I used ChatGPT to generate the poems. Objects of the NPCs are created from the NPC class.
 
 Optional Task 3:
 */
