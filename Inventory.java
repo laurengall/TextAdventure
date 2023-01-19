@@ -10,7 +10,9 @@ Endgame endgame = new Endgame();
         endgame.done(score);        
         
       }
-      
+      if (score == 330){
+        endgame.end(score);
+      }
         // Check if item is a valid room item
         boolean validRoomItem = false;
         for (String roomItems : room[row][col].items) {

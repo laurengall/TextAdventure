@@ -8,6 +8,7 @@ Inventory.java -> class Inventory -> public static String getInventorySize() and
 Task 2: Add a new class (that actually enhances the game).
 Endgame.java -> class Endgame -> public void done() gives the user their score after their inventory is at the minimum score, tells them how may items they need, and allows them to decide whether to continue or not. 
 NPC.java -> class NPC -> creates NPC objects that help Detective Dan stay away from traps with riddles. 
+Endgame.java -> class Endgame -> public void end() ends the game if the user continues to collect all 33 items and prints a nice message for them. 
 
 Task 3: Create at least 15 rooms with items.
 Rooms.java -> class Rooms -> 17 rooms are implemented. 
@@ -27,7 +28,7 @@ Theme is mystery, where the user is a detective searching for enough evidence in
 Optional Task 2: Add a NPC (non-player character).
 Classmates appear in the descriptions of rooms with a trap connected, and give Detective Dan a “riddle” that points him away from a trap. I used ChatGPT to generate the poems. Objects of the NPCs are created from the NPC class.
 
-Optional Task 3:
+Optional Task 3: Not implemented. 
 */
 public class Main  {
     public static void main(String args[]) {
