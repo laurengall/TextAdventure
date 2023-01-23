@@ -122,7 +122,7 @@ public class Main  {
             }
              
             else if (input.equals("score")) {
-            	System.out.println("Score: " + score + "/330");
+            	System.out.println("Score: " + score + "/350");
             }
             
             else if (input.equals("restart")) {
@@ -146,7 +146,7 @@ public class Main  {
             
             // Quit commands
               else if (input.equals("quit") && Inventory.getInventorySize2(inventory) >= 24){
-                System.out.println("YOU WIN. Your toal score was: "+ score + "/330. Goodbye!\nNote: All riddles were generated with ChatGPT due to the lack of poetry skills possessed by the maker of this game.");
+                System.out.println("YOU WIN. Your toal score was: "+ score + "/350. Goodbye!\nNote: All riddles were generated with ChatGPT due to the lack of poetry skills possessed by the maker of this game.");
                 playing = false;
               }
             else if (input.equals("quit")) {
@@ -165,4 +165,3 @@ public static void noExit(){
 }
 
 }
-

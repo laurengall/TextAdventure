@@ -5,7 +5,7 @@ class Rooms {
     static String exits[] = new String[4];
             
     public static void build(Room[][] room, final int HEIGHT, final int WIDTH) {
-// 17 rooms
+      // 17 rooms
     	// Initialize rooms
         for (int i = 0; i < HEIGHT; i++) {
             for (int j = 0; j < WIDTH; j++) {
@@ -17,7 +17,7 @@ class Rooms {
         exits[0] = ""; exits[1] = "s"; exits[2] = ""; exits[3] = "";
         room[0][7].setNumber(0);
         room[0][7].setName("Entry Way");
-        room[0][7].setDescription("You are in the entryway to the suspect's house.\nYou must get at least 25 items to win.\nGather all 33 items to get a perfect score.");
+        room[0][7].setDescription("You are in the entryway to the suspect's house.\nYou must get at least 25 items to win.\nGather all 35 items to get a perfect score.");
         room[0][7].setItems("newspaper");
         room[0][7].setItems("small box");
         room[0][7].setExits(exits);
@@ -32,7 +32,7 @@ class Rooms {
         room[1][7].setExits(exits);
 
       // Foyer row 2 col 
-      NPC foyer = new NPC("Caden D.","\n The setting sun, a hint of where to steer,\n West is not the way, it'll bring you only fear.\n Go south, and find what you've been missing,\n A new horizon, forever dismissing.");
+      NPC foyer = new NPC("Caden D.","\n\n The setting sun, a hint of where to steer,\n West is not the way, it'll bring you only fear.\n Go south, and find what you've been missing,\n A new horizon, forever dismissing.\n\n");
       
         exits[0] = "n"; exits[1] = "s"; exits[2] = ""; exits[3] = "w";
         room[2][7].setNumber(2);
@@ -43,11 +43,11 @@ class Rooms {
         room[2][7].setExits(exits);
 
       // Kitchen row 3 col 7
-      NPC kitchen = new NPC("Lauren G.", "\n The rising moon, a hint of where to be, \n East is not the way, it'll lead you astray.\n Go west, and find what you've been yearning, \n A new adventure, forever churning.");
+      NPC kitchen = new NPC("Lauren G.", "\n\n The rising moon, a hint of where to be, \n East is not the way, it'll lead you astray.\n Go west, and find what you've been yearning, \n A new adventure, forever churning.\n\n");
         exits[0] = "n"; exits[1] = ""; exits[2] = "e"; exits[3] = "w";
         room[3][7].setNumber(3);
         room[3][7].setName("Kitchen");
-        room[3][7].setDescription("You are in the kitchen. " + kitchen.getNpcName() + "says: " + kitchen.getWords());
+        room[3][7].setDescription("You are in the kitchen. " + kitchen.getNpcName() + " says: " + kitchen.getWords());
         room[3][7].setItems("bent fork");
         room[3][7].setItems("bloody knife");
         room[3][7].setExits(exits);
@@ -73,7 +73,7 @@ class Rooms {
       room[2][1].setExits(exits);
 
       // Closet row 2 col 0
-      NPC closet = new NPC("David F.", "\n If south brings you warmth and west brings you sea, \n But your destination is where you'll be free. \n Go back east, and on the right path you'll stay,\n Turn south and you'll wander astray.");
+      NPC closet = new NPC("David F.", "\n\n If south brings you warmth and west brings you sea, \n But your destination is where you'll be free. \n Go back east, and on the right path you'll stay,\n Turn south and you'll wander astray.\n\n");
       exits[0] = ""; exits[1] = "s"; exits[2] = "e"; exits[3] = "";
         room[2][0].setNumber(6);
         room[2][0].setName("Closet");
@@ -81,6 +81,7 @@ class Rooms {
       room[2][0].setItems("wig");
         room[2][0].setItems("ripped t-shirt");
       room[2][0].setExits(exits);
+      
       // Guest Bedroom row 3 col 1
       exits[0] = ""; exits[1] = ""; exits[2] = "e"; exits[3] = "";
         room[3][1].setNumber(7);
@@ -89,8 +90,9 @@ class Rooms {
       room[3][1].setItems("lead pipe");
         room[3][1].setItems("leather gloves");
 room[3][1].setExits(exits);
+      
       // Guest Bathroom row 3 col 2
-      NPC gBath = new NPC("Bill L.", "\n I always point you in the opposite direction of down,\n Go east or west, but never south, in this town.");
+      NPC gBath = new NPC("Bill L.", "\n\n I always point you in the opposite direction of down,\n Go east or west, but never south, in this town.\n\n");
       exits[0] = ""; exits[1] = "s"; exits[2] = "e"; exits[3] = "w";
         room[3][2].setNumber(8);
         room[3][2].setName("Guest Bathroom");
@@ -99,6 +101,7 @@ room[3][1].setExits(exits);
         room[3][2].setItems("blood stained towel");
       room[3][2].setItems("hair brush");
 room[3][2].setExits(exits);
+      
       // Office row 3 col 3
       exits[0] = "n"; exits[1] = ""; exits[2] = "e"; exits[3] = "w";
         room[3][3].setNumber(9);
@@ -107,6 +110,7 @@ room[3][2].setExits(exits);
       room[3][3].setItems("computer mouse");
         room[3][3].setItems("paper file");
 room[3][3].setExits(exits);
+      
       // Entrance to Master Bedroom row 2 col 2
       exits[0] = ""; exits[1] = ""; exits[2] = "e"; exits[3] = "w";
         room[2][2].setNumber(10);
@@ -114,6 +118,7 @@ room[3][3].setExits(exits);
         room[2][2].setDescription("You are in the entrance to master bedroom.");
       room[2][2].setItems("lone sock");
 room[2][2].setExits(exits);
+      
       // Hallway to Master Bedroom row 2 col 3
       exits[0] = ""; exits[1] = "s"; exits[2] = ""; exits[3] = "w";
         room[2][3].setNumber(11);
@@ -122,8 +127,9 @@ room[2][2].setExits(exits);
       room[2][3].setItems("pen");
       room[2][3].setItems("broken bottle");
 room[2][3].setExits(exits);
+      
       // Gym row 2 col 4
-      NPC gym = new NPC("Mathias M.", "\n Where sweat is shed and muscles are made,\n From there a new direction to take.\n Go south, young, one, and success you'll find, \n Your goal is waiting, just one step behind.");
+      NPC gym = new NPC("Mathias M.", "\n\n Where sweat is shed and muscles are made,\n From there a new direction to take.\n Go south, young, one, and success you'll find, \n Your goal is waiting, just one step behind.\n\n");
       exits[0] = "n"; exits[1] = "s"; exits[2] = ""; exits[3] = "";
         room[2][4].setNumber(12);
         room[2][4].setName("Gym");
@@ -131,14 +137,16 @@ room[2][3].setExits(exits);
       room[2][4].setItems("dumbbell");
       room[2][4].setItems("resistance band");
 room[2][4].setExits(exits);
+      
       // Garage row 4 col 4
-      NPC garage = new NPC("Ryan F.", "\n The rising sun, a hint of where to go,\n East is not the way, you'll only end up slow.\n Go north, and find what you've been searching for,\n A journey's end, forever to adore.");
+      NPC garage = new NPC("Ryan F.", "\n\n The rising sun, a hint of where to go,\n East is not the way, you'll only end up slow.\n Go north, and find what you've been searching for,\n A journey's end, forever to adore.\n\n");
       exits[0] = "n"; exits[1] = ""; exits[2] = "e"; exits[3] = "";
         room[4][4].setNumber(13);
         room[4][4].setName("Garage");
         room[4][4].setDescription("You are in the garage.\nIt smells like bleach and there are plastic tarps on the floor. "+ garage.getNpcName() + "says:" + garage.getWords());
       room[4][4].setItems("socket wrench");
 room[4][4].setExits(exits);
+      
       // Gaming room row 3 col 4
       exits[0] = "n"; exits[1] = "s"; exits[2] = "e"; exits[3] = "w";
         room[3][4].setNumber(14);
@@ -147,6 +155,7 @@ room[4][4].setExits(exits);
       room[3][4].setItems("controller");
       room[3][4].setItems("flash drive");
       room[3][4].setExits(exits);
+      
       // Family room row 3 col 5
       exits[0] = ""; exits[1] = ""; exits[2] = "e"; exits[3] = "w";
         room[3][5].setNumber(16);
@@ -155,6 +164,7 @@ room[4][4].setExits(exits);
       room[3][5].setItems("movie disc");
       room[3][5].setItems("string");
       room[3][5].setExits(exits);
+      
       // Dining room row 3 col 6
       exits[0] = ""; exits[1] = ""; exits[2] = "e"; exits[3] = "w";
         room[3][6].setNumber(15);

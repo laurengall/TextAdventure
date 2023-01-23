@@ -2,7 +2,7 @@ public class Endgame {
 
 public void done(int score){
  
-  System.out.println("Your current score is "+ score + "/330"); 
+  System.out.println("Your current score is "+ score + "/350"); 
   
   System.out.println("Press 1 to keep playing, press 2 to quit the game."); 
   
@@ -29,7 +29,7 @@ boolean keepAsking = true;
         
  }
  public void end(int score){
-   System.out.println("Congratulations, you collected 33/33 items and finished the game with a perfect score. The suspect is serving a life sentence thanks to your evidence.");
+   System.out.println("Congratulations, you collected 35/35 items and finished the game with a perfect score. The suspect is serving a life sentence thanks to your evidence.");
    System.exit(0); 
  }
  }

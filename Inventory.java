@@ -10,7 +10,7 @@ Endgame endgame = new Endgame();
         endgame.done(score);        
         
       }
-      if (score == 330){
+      if (inventory.size() == 34){
         endgame.end(score);
       }
         // Check if item is a valid room item
